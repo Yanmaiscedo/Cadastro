@@ -103,7 +103,25 @@ void cadastrarPessoa(){
     numPessoas++;
 }
 
-void cadastrarProduto(){}
+void cadastrarProduto(){
+    Produto novoProduto;
+    cout << "=== Cadastro de Produto ===" << endl;
+    cout << "Descri��o: ";
+    cin.ignore();
+    cin.getline(novoProduto.descricao, 100);
+    cout << "Modelo: ";
+    cin.getline(novoProduto.modelo, 50);
+    cout << "Marca: ";
+    cin.getline(novoProduto.marca, 50);
+    cout << "Tamanho: ";
+    cin.getline(novoProduto.tamanho, 10);
+    cout << "Cor: ";
+    cin.getline(novoProduto.cor, 20);
+    cout << "Pre�o: ";
+    cin >> novoProduto.preco;
+    produtos[numProdutos] = novoProduto;
+    numProdutos++;
+}
 
 void cadastrarItemProduto(){}
 
