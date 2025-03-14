@@ -60,11 +60,57 @@ int numItens = 0;
 Venda vendas[MAX_VENDAS];
 int numVendas = 0;
 
-void cadastrarPessoa(){}
+void cadastrarPessoa(){
+    Pessoa novaPessoa;
+    cin.ignore();
+    cout << "=== Cadastro de Pessoa ===" << endl;
+    cout << "Nome: ";
+    cin.getline(novaPessoa.nome, 100);
+    cout << "CPF: ";
+    cin.ignore();
+    cin.getline(novaPessoa.cpf, 12);
+    cout << "Sexo: ";
+    cin >> novaPessoa.sexo;
+    cout << "Data de Nascimento: ";
+    cin.ignore();
+	cin.getline(novaPessoa.dataNascimento, 11);
+    cout << "Endere�o: ";
+    cin.ignore();
+	cin.getline(novaPessoa.endereco, 100);
+	cout << "Time Favorito: ";
+    cin.ignore();
+	cin.getline(novaPessoa.timeFavorito, 50);
+    cout << "Sele��o Favorita: ";
+    cin.ignore();
+	cin.getline(novaPessoa.selecaoFavorita, 50);
+    cout << "Gosta de Futebol (1 - Sim / 0 - N�o): ";
+    cin >> novaPessoa.gostaFutebol;
+    cout << "Gosta de V�lei (1 - Sim / 0 - N�o): ";
+    cin >> novaPessoa.gostaVolei;
+    cout << "Gosta de Basquete (1 - Sim / 0 - N�o): ";
+    cin >> novaPessoa.gostaBasquete;
+    cout << "Gosta de Handball (1 - Sim / 0 - N�o): ";
+    cin >> novaPessoa.gostaHandbol;
+    cout << "Gosta de Nata��o (1 - Sim / 0 - N�o): ";
+    cin >> novaPessoa.gostaNatacao;
+    cout << "Gosta de Ciclismo (1 - Sim / 0 - N�o): ";
+    cin >> novaPessoa.gostaCiclismo;
+    cout << "Gosta de Atletismo (1 - Sim / 0 - N�o): ";
+    cin >> novaPessoa.gostaAtletismo;
+    cout << "Gosta de Muscula��o (1 - Sim / 0 - N�o): ";
+    cin >> novaPessoa.gostaMusculacao;
+    pessoas[numPessoas] = novaPessoa;
+    numPessoas++;
+}
+
 void cadastrarProduto(){}
+
 void cadastrarItemProduto(){}
+
 void cadastrarVenda(){}
+
 void listarProdutosPorPreco(){}
+
 void listarUltimasVendas(){}
 
 void exibirMenu() {
