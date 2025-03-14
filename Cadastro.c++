@@ -123,7 +123,33 @@ void cadastrarProduto(){
     numProdutos++;
 }
 
-void cadastrarItemProduto(){}
+void cadastrarItemProduto(){
+    ItemProduto novoItem;
+    cout << "=== Cadastro de Item de Produto ===" << endl;
+    int produtoIndex;
+    cout << "Selecione o n�mero do produto: ";
+    cin >> produtoIndex;
+    produtoIndex--;
+    if (produtoIndex < 0 || produtoIndex >= numProdutos) {
+        cout << "Produto inv�lido!" << endl;
+        return;
+    }
+
+    novoItem.produto = produtos[produtoIndex];
+
+    cout << "Data de Compra: ";
+    cin.ignore();
+    cin.getline(novoItem.dataCompra, 11);
+
+    cout << "Valor da Compra: ";
+    cin >> novoItem.valorCompra;
+
+    cout << "Situa��o: ";
+    cin.ignore();
+    cin.getline(novoItem.situacao, 20);
+    itens[numItens] = novoItem;
+    numItens++;
+}
 
 void cadastrarVenda(){}
 
