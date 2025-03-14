@@ -189,7 +189,23 @@ void cadastrarVenda(){
     numVendas++;
 }
 
-void listarProdutosPorPreco(){}
+void listarProdutosPorPreco(){
+    float preco;
+    cout << "Digite o pre�o desejado: ";
+    cin >> preco;
+    cout << "=== Produtos com Pre�o de R$" << preco << " ===" << endl;
+    for (int i = 0; i < numProdutos; i++) {
+        if (produtos[i].preco == preco) {
+            cout << "Descri��o: " << produtos[i].descricao << endl;
+            cout << "Modelo: " << produtos[i].modelo << endl;
+            cout << "Marca: " << produtos[i].marca << endl;
+            cout << "Tamanho: " << produtos[i].tamanho << endl;
+            cout << "Cor: " << produtos[i].cor << endl;
+            cout << "Pre�o: R$" << produtos[i].preco << endl;
+            cout << endl;
+        }
+    }
+}
 
 void listarUltimasVendas(){}
 
