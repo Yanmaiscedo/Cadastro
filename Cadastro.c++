@@ -207,7 +207,23 @@ void listarProdutosPorPreco(){
     }
 }
 
-void listarUltimasVendas(){}
+void listarUltimasVendas(){
+    int inicio = numVendas - 10;
+    if (inicio < 0)
+        inicio = 0;
+
+    cout << "=== �ltimas 10 Vendas ===" << endl;
+    for (int i = inicio; i < numVendas; i++) {
+        cout << "Produto: " << vendas[i].produto.descricao << endl;
+        cout << "Cliente: " << vendas[i].cliente.nome << endl;
+        cout << "Valor da Venda: R$" << vendas[i].valorVenda << endl;
+        cout << "Data da Venda: " << vendas[i].dataVenda << endl;
+        cout << "Data de Recebimento: " << vendas[i].dataRecebimento << endl;
+        cout << "Situa��o: " << vendas[i].situacao << endl;
+        cout << endl;
+        
+    }
+}
 
 void exibirMenu() {
     int opcao;
