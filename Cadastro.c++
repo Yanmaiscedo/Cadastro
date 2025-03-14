@@ -3,6 +3,63 @@
 
 using namespace std;
 
+const int MAX_PESSOAS = 100;
+const int MAX_PRODUTOS = 100;
+const int MAX_ITENS = 100;
+const int MAX_VENDAS = 100;
+
+struct Pessoa {
+    char nome[100];
+    char cpf[12];
+    char sexo;
+    char dataNascimento[11];
+    char endereco[100];
+    char timeFavorito[50];
+    char selecaoFavorita[50];
+    bool gostaFutebol;
+    bool gostaVolei;
+    bool gostaBasquete;
+    bool gostaHandbol;
+    bool gostaNatacao;
+    bool gostaCiclismo;
+    bool gostaAtletismo;
+    bool gostaMusculacao;
+};
+
+struct Produto {
+    char descricao[100];
+    char modelo[50];
+    char marca[50];
+    char tamanho[10];
+    char cor[20];
+    float preco;
+};
+
+struct ItemProduto {
+    Produto produto;
+    char dataCompra[11];
+    float valorCompra;
+    char situacao[20];
+};
+
+struct Venda {
+    Produto produto;
+    Pessoa cliente;
+    float valorVenda;
+    char dataVenda[11];
+    char dataRecebimento[11];
+    char situacao[20];
+};
+
+Pessoa pessoas[MAX_PESSOAS];
+int numPessoas = 0;
+Produto produtos[MAX_PRODUTOS];
+int numProdutos = 0;
+ItemProduto itens[MAX_ITENS];
+int numItens = 0;
+Venda vendas[MAX_VENDAS];
+int numVendas = 0;
+
 void cadastrarPessoa(){}
 void cadastrarProduto(){}
 void cadastrarItemProduto(){}
