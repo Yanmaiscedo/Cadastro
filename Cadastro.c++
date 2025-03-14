@@ -151,7 +151,43 @@ void cadastrarItemProduto(){
     numItens++;
 }
 
-void cadastrarVenda(){}
+void cadastrarVenda(){
+    Venda novaVenda;
+    cout << "=== Cadastro de Venda ===" << endl;
+    int produtoIndex;
+    cout << "Selecione o n�mero do produto: ";
+    cin >> produtoIndex;
+    produtoIndex--; 
+    if (produtoIndex < 0 || produtoIndex >= numProdutos) {
+        cout << "Produto inv�lido!" << endl;
+        return;
+    }
+    
+    novaVenda.produto = produtos[produtoIndex];
+   
+    int clienteIndex;
+    cout << "Selecione o n�mero do cliente: ";
+    cin >> clienteIndex;
+    clienteIndex--;
+    if (clienteIndex < 0 || clienteIndex >= numPessoas) {
+        cout << "Cliente inv�lido!" << endl;
+        return;
+    }
+
+    novaVenda.cliente = pessoas[clienteIndex];
+
+    cout << "Valor da Venda: ";
+    cin >> novaVenda.valorVenda;
+    cout << "Data da Venda: ";
+    cin.ignore();
+    cin.getline(novaVenda.dataVenda, 11);
+    cout << "Data de Recebimento: ";
+    cin.getline(novaVenda.dataRecebimento, 11);
+    cout << "Situa��o: ";
+    cin.getline(novaVenda.situacao, 20);
+    vendas[numVendas] = novaVenda;
+    numVendas++;
+}
 
 void listarProdutosPorPreco(){}
 
